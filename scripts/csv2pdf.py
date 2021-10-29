@@ -8,7 +8,7 @@
 ###############################################################################
 import csv
 
-with open('CCCC_en.csv', newline='') as f:
+with open('info/CCCC_en.csv', newline='') as f:
     reader = csv.reader(f)
     for row in reader:
         print(row)
