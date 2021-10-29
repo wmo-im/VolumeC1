@@ -7,14 +7,13 @@
 #              
 ###############################################################################
 import csv
-import FPDF
 
 with open('info/CCCC_en.csv', newline='') as f:
     reader = csv.reader(f)
     for row in reader:
         print(row)
-        
-        pdf = FPDF()
+from fpdf import FPDF, HTMLMixin        
+pdf = FPDF()
 pdf.add_page()
 page_width = pdf.w - 2 * pdf.l_margin
 		
