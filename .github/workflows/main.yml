@@ -9,7 +9,9 @@ jobs:
 
     steps:
     - name: checkout actions
-    - uses: actions/checkout@v1
+      uses: actions/checkout@v1
+      with:
+       ref: ${{ github.ref }}
     - name: Update CCCC list
       run: |
         python3 scripts/csv2pdf.py
