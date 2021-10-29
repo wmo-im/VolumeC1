@@ -8,7 +8,7 @@
 ###############################################################################
 import csv
 
-with open('CCCC.csv', newline='') as f:
+with open('CCCC_en.csv', newline='') as f:
     reader = csv.reader(f)
     for row in reader:
         print(row)
@@ -41,4 +41,4 @@ pdf = FPDF()
 	pdf.set_font('Times','',10.0) 
 	pdf.cell(page_width, 0.0, '- end of report -', align='C')
 	
-	pdf.output('CCCC.pdf', 'F')
+	pdf.output('CCCC_en.pdf', 'F')
