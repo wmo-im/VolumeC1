@@ -1,0 +1,25 @@
+name: csv2pdf
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout actions
+    - uses: actions/checkout@v1
+
+ 		
+    - name: Update CCCC list
+      run: |
+        python3 scripts/csv2pdf.py
+		
+    - name: commit
+      run: |
+        git config --global user.email xchen@wmo.int
+        git config --global user.name Xiaoxia CHEN
+        git branch
+        git add .
+        git commit -m "update" -a
