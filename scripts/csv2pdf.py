@@ -7,6 +7,7 @@
 #              
 ###############################################################################
 import csv
+import FPDF
 
 with open('info/CCCC_en.csv', newline='') as f:
     reader = csv.reader(f)
